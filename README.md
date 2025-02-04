@@ -41,3 +41,11 @@ Analiza koristi iste parametre kao prethodno, prikazujući srednje kašnjenje u 
 <img src="Slike/graf2.png" >
 <br>
 Slika 4:Prikaz srednjeg kašnjena bez RTP zaglavlja</p>
+
+## Uporedni prikaz srednjeg kašnjenja
+Grafik prikazuje uporednu analizu srednjeg kašnjenja s i bez RTP zaglavlja. Uočava se minimalna razlika u kašnjenju zbog malog utjecaja RTP zaglavlja od 12B. Ova razlika je primjetnija pri nižim FPS vrijednostima, dok pri većim FPS-ima (60FPS i 100FPS) gotovo nestaje. To pokazuje da s porastom FPS-a kašnjenje uzrokovano RTP zaglavljem postaje zanemarivo, dok veličina paketa i brzina prijenosa ostaju ključni faktori koji utiču na ukupno kašnjenje.
+
+<p align="center">
+<img src="Slike/graf3.png" >
+<br>
+Slika 5:Uporedni prikaz srednjeg kašnjenja</p>
