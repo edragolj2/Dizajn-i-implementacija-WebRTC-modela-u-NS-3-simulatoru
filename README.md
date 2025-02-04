@@ -17,6 +17,27 @@ Slika 1: TCP three-way handshake dijagram</p>
 U simulaciji, podaci se prenose putem RTP (Real-time Transport Protocol) zaglavlja, koje omogućava sinhronizaciju, identifikaciju i sekvenciranje medijskih paketa, čime se osigurava ispravno dekodiranje i rekonstrukcija audio i video sadržaja. RTP zaglavlje sadrži ključna polja poput verzije (V), padding bita (P), oznake za proširenje (X), broja CSRC identifikatora (CC), oznake važnih događaja (M) i tipa korisnog tereta (PT) koji definiše format podataka. Također, uključuje redni broj za praćenje ispravnog redoslijeda paketa, timestamp za sinhronizaciju i mjerenje kašnjenja, te SSRC identifikator za prepoznavanje izvora podataka. Ova struktura omogućava pouzdanu i efikasnu P2P komunikaciju u realnom vremenu. Na slijedećoj slici je prikazan izgled RTP header - a:
 
 <p align="center">
-<img src="Slike/headerer.png" >
+<img src="Slike/hederer.png" >
 <br>
-Slika 1: RTP header</p>
+Slika 2: RTP header</p>
+
+## Opis testiranih scenarija i rezultati simulacija
+Za potrebe simulacije kreiran je payload paket veličine 1200 bajta, što predstavlja optimalnu ravnotežu između efikasnosti pakovanja i performansi H.264 (AVC) kodeka. Ova veličina omogućava bolje upravljanje protokom podataka i smanjuje latenciju, dok se sigurno uklapa unutar Ethernet MTU od 1500 bajta, izbjegavajući fragmentaciju čak i uz dodatna RTP/UDP/IP zaglavlja. Prag kašnjenja postavljen je ispod 150 ms, u skladu s ITU-T Rec. G.114 preporukama, koje ukazuju da većina aplikacija funkcioniše stabilno ispod ovog praga. Rezultati simulacije pokazuju da latencija ostaje stabilna do 180 korisnika, s prosječnom vrijednošću od 145,20 ms i standardnom devijacijom od 20,48 ms. Iznad tog broja korisnika dolazi do naglog porasta latencije, što ukazuje na dostizanje gornje granice performansi sistema.
+
+## Prikaz srednjeg kašnjena sa RTP zaglavljem
+Na slici 3. vidi se prikaz srednjeg kašnjenja sa RTP zaglavljem. Grafik sadrži pet krivulja, od
+kojih svaka predstavlja razlicitu vrijednost FPS-a: 15, 30, 45, 60 i 100 FPS.
+
+<p align="center">
+<img src="Slike/graf1.png" >
+<br>
+Slika 3:Prikaz srednjeg kašnjena sa RTP zaglavljem</p>
+
+
+## Prikaz srednjeg kašnjenja bez RTP zaglavlja
+Analiza koristi iste parametre kao prethodno, prikazujući srednje kašnjenje u zavisnosti od veličine paketa (51MB, 150MB, 366MB, 666MB, 1026MB) i različitih FPS vrijednosti (15, 30, 45, 60, 100 FPS). Grafik pokazuje da povećanje veličine paketa povećava kašnjenje, dok veći FPS smanjuje kašnjenje. U ovom slučaju, paketi su slani bez RTP zaglavlja, što je rezultiralo smanjenjem srednjeg kašnjenja proporcionalno veličini RTP zaglavlja.
+
+<p align="center">
+<img src="Slike/graf2.png" >
+<br>
+Slika 4:Prikaz srednjeg kašnjena bez RTP zaglavlja</p>
