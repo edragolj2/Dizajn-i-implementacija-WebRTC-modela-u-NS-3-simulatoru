@@ -31,7 +31,7 @@ kojih svaka predstavlja razlicitu vrijednost FPS-a: 15, 30, 45, 60 i 100 FPS.
 <p align="center">
 <img src="Slike/graf1.png" >
 <br>
-Slika 3:Prikaz srednjeg kašnjena sa RTP zaglavljem</p>
+Slika 3 :Prikaz srednjeg kašnjena sa RTP zaglavljem</p>
 
 
 ## Prikaz srednjeg kašnjenja bez RTP zaglavlja
@@ -40,7 +40,7 @@ Analiza koristi iste parametre kao prethodno, prikazujući srednje kašnjenje u 
 <p align="center">
 <img src="Slike/graf2.png" >
 <br>
-Slika 4:Prikaz srednjeg kašnjena bez RTP zaglavlja</p>
+Slika 4 :Prikaz srednjeg kašnjena bez RTP zaglavlja</p>
 
 ## Uporedni prikaz srednjeg kašnjenja
 Grafik prikazuje uporednu analizu srednjeg kašnjenja s i bez RTP zaglavlja. Uočava se minimalna razlika u kašnjenju zbog malog utjecaja RTP zaglavlja od 12B. Ova razlika je primjetnija pri nižim FPS vrijednostima, dok pri većim FPS-ima (60FPS i 100FPS) gotovo nestaje. To pokazuje da s porastom FPS-a kašnjenje uzrokovano RTP zaglavljem postaje zanemarivo, dok veličina paketa i brzina prijenosa ostaju ključni faktori koji utiču na ukupno kašnjenje.
@@ -48,4 +48,12 @@ Grafik prikazuje uporednu analizu srednjeg kašnjenja s i bez RTP zaglavlja. Uo�
 <p align="center">
 <img src="Slike/graf3.png" >
 <br>
-Slika 5:Uporedni prikaz srednjeg kašnjenja</p>
+Slika 5 :Uporedni prikaz srednjeg kašnjenja</p>
+
+## Zaključak
+
+Drugi dio projektnog zadatka fokusirao se na primjenu teorijskih znanja o WebRTC-u kroz simulaciju i analizu rezultata specifičnih scenarija. U okviru ovog dijela, testiran je utjecaj različitih FPS vrijednosti (od 15 do 100 FPS-a) na kašnjenje u mreži, uz promjenu intervala generiranja paketa koje server šalje klijentima. Rezultati simulacija pokazali su da veličina paketa, FPS vrijednosti i prisustvo RTP zaglavlja značajno utiču na kašnjenje.
+
+Optimalna veličina paketa od 1200 bajta pokazala se najboljom, jer omogućava efikasniji prijenos podataka i smanjuje rizik od fragmentacije u odnosu na Ethernet MTU od 1500 bajta. Povećanje veličine paketa povećava kašnjenje, ali brzina tog povećanja zavisi od FPS vrijednosti. Pri nižim FPS vrijednostima, kašnjenje se povećava brže s rastom veličine paketa, dok veće FPS vrijednosti smanjuju taj rast. Također, prisustvo RTP zaglavlja dodatno povećava kašnjenje, dok njegovo izostavljanje smanjuje isto, što je potvrđeno kroz simulacije s i bez RTP zaglavlja.
+
+Zbog jednostavne implementirane topologije, prostor za varijaciju parametara bio je ograničen, što je otežalo planiranje testnih scenarija. Ovaj limitirani prostor nije omogućio dovoljno fleksibilnosti u ispitivanju svih kombinacija parametara, što je dovelo do izazova u kreiranju i optimizaciji testnih scenarija. Kao rezultat, neki aspekti testiranja su morali biti pojednostavljeni, a preciznost rezultata smanjena jer nisu mogli biti u potpunosti istraženi svi potencijalni utjecaji varijacija parametara na performanse sistema.
