@@ -10,7 +10,7 @@ Simulacija pruža uvid u performanse WebRTC tehnologije u različitim mrežnim u
 <p align="center">
 <img src="Slike/msc.png" >
 <br>
-Slika 1: TCP three-way handshake dijagram</p>
+Slika 1: Način odvijanja komunikacije </p>
 
 
 ## Opis RTP zaglavlja
