@@ -1,11 +1,11 @@
-# SPTM---RTP-projekat
+# Dizajn i implementacija WebRTC modela u NS-3 simulatoru
 
 ## Opis rješenja
-U okviru ovog projekta razvijen je WebRTC (Web Real-Time Communication) model u NS-3 mrežnom simulatoru, s fokusom na uspostavljanje peer-to-peer (P2P) veze i prijenos podataka. Zbog nedostatka postojećih rješenja i dokumentacije za direktnu integraciju WebRTC funkcionalnosti u NS-3, implementiran je prilagođeni model koji omogućava signalizaciju, uspostavljanje P2P konekcija i prijenos medijskih podataka korištenjem RTP-a preko UDP-a.
+U okviru ovog projekta razvijen je WebRTC (Web Real-Time Communication) model u NS-3 mrežnom simulatoru, s fokusom na razvoj WebRTC modela u NS-3, pri čemu su implementirane ključne funkcionalnosti poput uspostavljanja peer-to-peer konekcije i prenosa podataka koristeći RTP preko UDP-a.
 
-Model se sastoji od dva čvora – klijenta i servera – koji uspostavljaju vezu putem TCP three-way handshaka, nakon čega slijedi prijenos RTP paketa preko UDP protokola. Ova implementacija omogućava simulaciju i analizu ključnih parametara komunikacije, poput gubitka paketa i kašnjenja, uz prikaz rezultata kroz dijagrame i histograme.
+Implementirani model sastoji se od dva čvora – klijenta i servera, povezanih putem peer-to-peer veze. Komunikacija se inicijalno uspostavlja TCP three-way handshakeom, nakon čega slijedi prenos RTP paketa korištenjem UDP protokola. Ova implementacija omogućava simulaciju i analizu ključnih parametara komunikacije, poput gubitka paketa i kašnjenja, uz prikaz rezultata kroz dijagrame i histograme.
 
-Simulacija pruža uvid u performanse WebRTC tehnologije u različitim mrežnim uslovima, identifikuje potencijalne izazove i doprinosi optimizaciji njenih performansi. Zaključeno je da NS-3 predstavlja efikasno okruženje za testiranje i dalji razvoj WebRTC tehnologije u realnim aplikacijama. Na slijedećoj slici je dat prikaz rada same simulacije:
+Simulacija pruža uvid u performanse WebRTC tehnologije u različitim mrežnim uslovima, identifikuje potencijalne izazove i doprinosi optimizaciji njenih performansi. Zaključeno je da NS-3 predstavlja efikasno okruženje za testiranje i dalji razvoj WebRTC tehnologije u realnim aplikacijama. Na sljedećoj slici je dat prikaz rada same simulacije:
 
 <p align="center">
 <img src="Slike/msc.png" >
