@@ -1,7 +1,7 @@
 # Dizajn i implementacija WebRTC modela u NS-3 simulatoru
 
 ## Opis rješenja
-U okviru ovog projekta razvijen je WebRTC (Web Real-Time Communication) model u NS-3 mrežnom simulatoru, s fokusom na razvoj WebRTC modela u NS-3, pri čemu su implementirane ključne funkcionalnosti poput uspostavljanja peer-to-peer konekcije i prenosa podataka koristeći RTP preko UDP-a.
+U okviru ovog projekta razvijen je WebRTC (Web Real-Time Communication) model u NS-3 mrežnom simulatoru, pri čemu su implementirane ključne funkcionalnosti poput uspostavljanja peer-to-peer konekcije i prenosa podataka koristeći RTP preko UDP-a.
 
 Implementirani model sastoji se od dva čvora – klijenta i servera, povezanih putem peer-to-peer veze. Komunikacija se inicijalno uspostavlja TCP three-way handshakeom, nakon čega slijedi prenos RTP paketa korištenjem UDP protokola. Ova implementacija omogućava simulaciju i analizu ključnih parametara komunikacije, poput gubitka paketa i kašnjenja, uz prikaz rezultata kroz dijagrame i histograme.
 
