@@ -14,7 +14,7 @@ Slika 1: Način odvijanja komunikacije </p>
 
 
 ## Opis RTP zaglavlja
-U simulaciji, podaci se prenose putem RTP (Real-time Transport Protocol) zaglavlja, koje omogućava sinhronizaciju, identifikaciju i sekvenciranje medijskih paketa, čime se osigurava ispravno dekodiranje i rekonstrukcija audio i video sadržaja. RTP zaglavlje sadrži ključna polja poput verzije (V), padding bita (P), oznake za proširenje (X), broja CSRC identifikatora (CC), oznake važnih događaja (M) i tipa korisnog tereta (PT) koji definiše format podataka. Također, uključuje redni broj za praćenje ispravnog redoslijeda paketa, timestamp za sinhronizaciju i mjerenje kašnjenja, te SSRC identifikator za prepoznavanje izvora podataka. Ova struktura omogućava pouzdanu i efikasnu P2P komunikaciju u realnom vremenu. Na slijedećoj slici je prikazan izgled RTP header - a:
+U simulaciji, podaci se prenose putem RTP (Real-time Transport Protocol) zaglavlja, koje omogućava sinhronizaciju, identifikaciju i sekvenciranje medijskih paketa, čime se osigurava ispravno dekodiranje i rekonstrukcija audio i video sadržaja. RTP zaglavlje sadrži ključna polja poput verzije (V), padding bita (P), oznake za proširenje (X), broja CSRC identifikatora (CC), oznake važnih događaja (M) i tipa korisnog tereta (PT) koji definiše format podataka. Također, uključuje redni broj za praćenje ispravnog redoslijeda paketa, timestamp za sinhronizaciju i mjerenje kašnjenja, te SSRC identifikator za prepoznavanje izvora podataka. Ova struktura omogućava pouzdanu i efikasnu P2P komunikaciju u realnom vremenu. Na slijedećoj slici je prikazan izgled RTP header-a:
 
 <p align="center">
 <img src="Slike/hederer.png" >
